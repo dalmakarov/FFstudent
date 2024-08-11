@@ -1,3 +1,4 @@
+import '/components/button_component/button_component_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'onboarding_widget.dart' show OnboardingWidget;
 import 'package:flutter/material.dart';
@@ -13,10 +14,16 @@ class OnboardingModel extends FlutterFlowModel<OnboardingWidget> {
           pageViewController!.page != null
       ? pageViewController!.page!.round()
       : 0;
+  // Model for buttonComponent component.
+  late ButtonComponentModel buttonComponentModel;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    buttonComponentModel = createModel(context, () => ButtonComponentModel());
+  }
 
   @override
-  void dispose() {}
+  void dispose() {
+    buttonComponentModel.dispose();
+  }
 }
